@@ -1,7 +1,7 @@
 public abstract class CharacterStates
 {
-    protected CharacterController controller;
-    public CharacterStates(CharacterController _controller)
+    protected PlayerController controller;
+    public CharacterStates(PlayerController _controller)
     {
         this.controller = _controller;
     }
