@@ -40,11 +40,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\ClassAbility.cs" />
      <Compile Include="Assets\Script\Character\States\WalkingState.cs" />
+     <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\TitanClassAbility.cs" />
      <Compile Include="Assets\Script\Character\States\CharacterStates.cs" />
      <Compile Include="Assets\Script\CharacterClass\CharacterClass.cs" />
      <Compile Include="Assets\Script\Character\States\JumpState.cs" />
      <Compile Include="Assets\Script\Controller\PlayerController.cs" />
+     <Compile Include="Assets\Test\TempCharACTER.cs" />
      <Compile Include="Assets\Script\Character\States\IdleState.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
