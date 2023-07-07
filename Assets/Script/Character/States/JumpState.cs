@@ -1,8 +1,23 @@
-public class JumpState : CharacterStates
+using FPS.Controller;
+
+namespace FPS.Player.State
 {
-    public JumpState(PlayerController controller) : base(controller) { }
-    public override void UpdateState()
+    public class JumpState : CharacterStates
     {
-        
+        public JumpState(PlayerController controller) : base(controller) { }
+
+        public override void EnterState()
+        {
+
+        }
+        public override void UpdateState()
+        {
+            
+        }
+        public override void ExitState()
+        {
+
+        }
     }
 }
+

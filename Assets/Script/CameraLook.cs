@@ -6,7 +6,7 @@ namespace FPS
 {
     public class CameraLook : MonoBehaviour
     {
-        public InputManager inputManager;
+        public InputManagerPlayerAction inputManager;
 
         public float mouseLookSens = 25;
         public Transform body;

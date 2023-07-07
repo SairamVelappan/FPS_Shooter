@@ -1,16 +1,26 @@
 using UnityEngine;
-public class WalkingState : CharacterStates
+using FPS.Controller;
+using FPS.InputManager;
+
+namespace FPS.Player.State
 {
-    public WalkingState(PlayerController controller) : base(controller) { }
-
-    Vector2 movement;Vector3 move;
-    public override void UpdateState()
+    public class WalkingState : CharacterStates
     {
-        movement = controller.inputManager.playerControl.Movement.WASD.ReadValue<Vector2>();
+        public WalkingState(PlayerController controller) : base(controller) { }
+        private InputHandler handler;
+        
+        public override void EnterState()
+        {
+            handler = new WalkingInputHandler();
+        }
+        public override void UpdateState()
+        {
+            handler.HandleMovementState(controller);
+        }
+        public override void ExitState()
+        {
 
-        move = controller.gameObject.transform.right * movement.x + controller.gameObject.transform.transform.forward * movement.y;
-
-        move *= controller.inputManager.playerControl.Movement.Run.ReadValue<float>() == 0 ? controller.speed : controller.runSpeed;
-        controller.rb.velocity = new Vector3(move.x, controller.rb.velocity.y, move.z);
+        }
     }
 }
+
