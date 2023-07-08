@@ -5,7 +5,7 @@ namespace FPS.InputManager
 {
     public class JumpInputHandler : InputHandler
     {
-        public override void HandleIdleState()
+        public override void HandleIdleState(PlayerController controller)
         {
             
         }

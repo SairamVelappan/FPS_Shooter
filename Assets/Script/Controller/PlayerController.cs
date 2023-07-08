@@ -30,7 +30,7 @@ namespace FPS.Controller
             currentState?.UpdateState();
         }
 
-        private void SwitchStates(CharacterStates nextState)
+        public void SwitchStates(CharacterStates nextState)
         {
             currentState?.ExitState();
             currentState = nextState;

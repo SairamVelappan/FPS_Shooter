@@ -6,8 +6,8 @@ namespace FPS.Player.State
 {
     public class WalkingState : CharacterStates
     {
-        public WalkingState(PlayerController controller) : base(controller) { }
         private InputHandler handler;
+        public WalkingState(PlayerController controller) : base(controller) { }
         
         public override void EnterState()
         {
