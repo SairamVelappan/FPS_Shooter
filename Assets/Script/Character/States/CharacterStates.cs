@@ -1,9 +1,18 @@
-public abstract class CharacterStates
+using FPS.Controller;
+
+namespace FPS.Player.State
 {
-    protected PlayerController controller;
-    public CharacterStates(PlayerController _controller)
+    public abstract class CharacterStates
     {
-        this.controller = _controller;
+        protected PlayerController controller;
+        public CharacterStates(PlayerController _controller)
+        {
+            this.controller = _controller;
+        }
+
+        public abstract void EnterState();
+        public abstract void UpdateState();
+        public abstract void ExitState();
     }
-    public abstract void UpdateState();
+
 }

@@ -1,9 +1,26 @@
 using UnityEngine;
-public class IdleStates : CharacterStates
+using FPS.Controller;
+using FPS.InputManager;
+
+namespace FPS.Player.State
 {
-    public IdleStates(PlayerController controller) : base(controller) { }
-    public override void UpdateState()
+    public class IdleStates : CharacterStates
     {
-        // controller.inputManager.playerControl.Movement.WASD.ReadValue<Vector2>().ma
+        private InputHandler handler;
+        public IdleStates(PlayerController controller) : base(controller) { }
+
+        public override void EnterState()
+        {
+            handler = new IdleInputHandler();
+        }
+        public override void UpdateState()
+        {
+            handler.HandleIdleState(controller);
+        }
+        public override void ExitState()
+        {
+
+        }
     }
+
 }

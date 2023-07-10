@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FPS
 {
-    public class InputManager : MonoBehaviour
+    public class InputManagerPlayerAction : MonoBehaviour
     {
         public PlayerControlles playerControl;
 
