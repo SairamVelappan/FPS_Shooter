@@ -41,12 +41,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\ClassAbility.cs" />
+     <Compile Include="Assets\Script\Controller\PlayerWeaponController.cs" />
      <Compile Include="Assets\Script\InputManagerPlayerAction.cs" />
      <Compile Include="Assets\Script\Character\States\WalkingState.cs" />
      <Compile Include="Assets\Script\Character\InputManager\JumpInputHandler.cs" />
      <Compile Include="Assets\Script\CameraLook.cs" />
      <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\TitanClassAbility.cs" />
+     <Compile Include="Assets\Script\Weapons\WeaponData.cs" />
      <Compile Include="Assets\Script\Character\InputManager\IdleInputHandler.cs" />
+     <Compile Include="Assets\Script\Weapons\Weapon.cs" />
      <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\WarlockClassAbility.cs" />
      <Compile Include="Assets\Script\CharacterAbilities\ClassAbility\HunterClassAbility.cs" />
      <Compile Include="Assets\Script\InputActions\PlayerControlles.cs" />
@@ -60,6 +63,7 @@
      <Compile Include="Assets\Script\PlayerMovement.cs" />
      <Compile Include="Assets\Script\Character\States\IdleState.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\Art\Models\Weapons\DelthorGames\MCX\HowToUse.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
