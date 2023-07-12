@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fbb2b5cdab64e458641141b83fe93e, type: 3}
   m_Name: Hunter
   m_EditorClassIdentifier: 
-  classAbility: {fileID: 644385215306084729, guid: ce56ca025daa0ad4698f0d149c5c7d2f,
+  classAbility: {fileID: 9177036178779215745, guid: ae2990fa3976a1c4f87523f775a8ef6e,
     type: 3}

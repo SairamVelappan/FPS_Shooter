@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using FPS.Character.Abilities.ClassAbilities;
 
-namespace FPS
+namespace FPS.Character.Abilities.ClassAbilities
 {
     public class TitanClassAbility : ClassAbility
     {
-        public override void Perform()
+        public override void Perform(TempCharACTER aCTER)
         {
-           Instantiate(classAbilityPrefab,transform.position+offset,Quaternion.identity);
+           Instantiate(classAbilityPrefab,aCTER.transform.position+offset,Quaternion.identity);
         }
     }
 }

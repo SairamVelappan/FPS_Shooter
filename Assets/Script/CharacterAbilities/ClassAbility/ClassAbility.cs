@@ -10,6 +10,6 @@ namespace FPS.Character.Abilities.ClassAbilities
         public GameObject classAbilityPrefab;
         public Vector3 offset;
 
-        public abstract void Perform();
+        public abstract void Perform(TempCharACTER charACTER);
     }
 }

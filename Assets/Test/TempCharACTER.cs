@@ -13,7 +13,7 @@ namespace FPS.Character
         {
             if(Input.GetKeyDown(KeyCode.V))
             {
-                _characterClass.classAbility.Perform();
+               _characterClass.classAbility.Perform(this);
             }
         }
     }
