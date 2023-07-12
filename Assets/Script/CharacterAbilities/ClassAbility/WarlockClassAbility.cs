@@ -5,7 +5,7 @@ using FPS.Character.Abilities.ClassAbilities;
 
 namespace FPS.Character.Abilities.ClassAbilities
 {
-    public class TitanClassAbility : ClassAbility
+    public class WarlockClassAbility : ClassAbility
     {
         public override void Perform(TempCharACTER aCTER)
         {
