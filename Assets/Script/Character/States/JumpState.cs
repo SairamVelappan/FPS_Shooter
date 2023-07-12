@@ -10,16 +10,18 @@ namespace FPS.Player.State
 
         public override void EnterState()
         {
-            handler = new JumpInputHandler();
+            handler = new MovementInputHandler(controller);
+            handler.HandleJumpState();
         }
         public override void UpdateState()
         {
-            handler.HandleJumpState();
+            
         }
         public override void ExitState()
         {
 
         }
+
     }
 }
 
