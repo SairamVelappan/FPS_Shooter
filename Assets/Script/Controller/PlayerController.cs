@@ -10,10 +10,10 @@ namespace FPS.Controller
         #region Variables
             public InputManagerPlayerAction inputManager;
             public CharacterJump characterJump;
-            private CharacterStates currentState;
+            public CharacterStates currentState;
             public CharacterStats characterStats;
             public Rigidbody rb;
-            private IdleStates idleStates;
+            public IdleStates idleStates;
             private WalkingState walkState;
             private JumpState jumpstate;
         #endregion
@@ -33,7 +33,9 @@ namespace FPS.Controller
             inputManager.playerControl.Movement.Jump.performed +=_=> OnJump();
         }
 
-        private void Update() => GroundCheck();
+        private void Update(){
+            GroundCheck();
+        }
         private void FixedUpdate() => currentState?.UpdateState();
         private void OnJump() => SwitchStates(jumpstate);
 

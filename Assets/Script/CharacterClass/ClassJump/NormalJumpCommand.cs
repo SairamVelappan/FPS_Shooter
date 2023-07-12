@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FPS.Controller;
+using FPS.Player.State;
 
 namespace FPS.Character.Jump
 {
@@ -15,8 +14,11 @@ namespace FPS.Character.Jump
         }
         public void Execute()
         {
-            if(controller.GroundCheck())           
+            if(controller.GroundCheck())
+            {
                 controller.rb.AddForce(controller.transform.up * controller.characterStats.jumpForce, ForceMode.Impulse);
+                controller.SwitchStates(new IdleStates(controller));
+            }           
         }
     }
 }
