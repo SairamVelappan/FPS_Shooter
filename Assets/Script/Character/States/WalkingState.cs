@@ -11,11 +11,11 @@ namespace FPS.Player.State
         
         public override void EnterState()
         {
-            handler = new WalkingInputHandler();
+            handler = new MovementInputHandler(controller);
         }
         public override void UpdateState()
         {
-            handler.HandleMovementState(controller);
+            handler.HandleMovementState();
         }
         public override void ExitState()
         {

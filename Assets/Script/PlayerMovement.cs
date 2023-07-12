@@ -14,20 +14,13 @@ namespace FPS
 
         private void Start() {
             rb = GetComponent<Rigidbody>();
-            inputManager.playerControl.Movement.Jump.started +=_=> Jump();
+            inputManager.playerControl.Movement.Jump.performed += ctx => Jump();
+
+            
+            // if(controller.inputManager.playerControl.Movement.Jump.WasPressedThisFrame())
+            //     controller.SwitchStates(new JumpState(controller));
         }
-
-        private void Update() {
-            // float forward = inputManager.playerControl.Movement.Forward.ReadValue<float>(); 
-            // float right = inputManager.playerControl.Movement.Right.ReadValue<float>(); 
-
-            // movement = inputManager.playerControl.Movement.WASD.ReadValue<Vector2>();
-
-            // Vector3 move = transform.right * movement.x + transform.forward * forward;
-
-            // move *= inputManager.playerControl.Movement.Run.ReadValue<float>() == 0 ? speed : runSpeed;
-            // rb.velocity = new Vector3(move.x, rb.velocity.y, move.z);
-        }
+        
 
         private void Jump()
         {
