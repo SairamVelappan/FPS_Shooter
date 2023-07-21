@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fca2f4eb60a31a4e9c5a4d53c24dae6, type: 3}
-  m_Name: RecluseWeaponData
+  m_Name: ChromaRushWeaponData
   m_EditorClassIdentifier: 
-  name: Recluse
-  impact: 15
-  range: 34
-  stability: 47
-  handling: 63
-  reloadSpeed: 28
-  zoom: 13
-  roundsPerMinute: 900
-  magSize: 36
-  recoilDirection: 4
+  name: Chroma Rush
+  impact: 18
+  range: 25
+  stability: 56
+  handling: 35
+  reloadSpeed: 47
+  zoom: 16
+  roundsPerMinute: 720
+  magSize: 51
+  recoilDirection: 5
