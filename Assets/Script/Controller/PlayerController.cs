@@ -30,7 +30,7 @@ namespace FPS.Controller
             currentState = idleStates;
             currentState.EnterState();
 
-            inputManager.playerControl.Movement.Jump.performed +=_=> OnJump();
+            inputManager.playerInput.Movement.Jump.performed +=_=> OnJump();
         }
 
         private void Update(){
