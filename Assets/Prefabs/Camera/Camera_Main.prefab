@@ -213,6 +213,37 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!1 &4720548437154408367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230767547694448850}
+  m_Layer: 0
+  m_Name: MuzzleTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &230767547694448850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720548437154408367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0719, z: 1.0091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 552221250583064023}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7625776219863748401
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
-  mouseLookSens: 25
+  mouseLookSens: 10
   body: {fileID: 0}
 --- !u!114 &1216858689177914033
 MonoBehaviour:
@@ -536,6 +567,11 @@ PrefabInstance:
       propertyPath: _cameraTransform
       value: 
       objectReference: {fileID: 285206616718723186}
+    - target: {fileID: 759648395318849117, guid: 70881f7f2de7aaa47b6fffdd51cf0a17,
+        type: 3}
+      propertyPath: _muzzleTransform
+      value: 
+      objectReference: {fileID: 230767547694448850}
     - target: {fileID: 2602758492545723233, guid: 70881f7f2de7aaa47b6fffdd51cf0a17,
         type: 3}
       propertyPath: m_Name
@@ -545,12 +581,22 @@ PrefabInstance:
     - {fileID: 9167829140089386363, guid: 70881f7f2de7aaa47b6fffdd51cf0a17, type: 3}
     - {fileID: 7132978129553116915, guid: 70881f7f2de7aaa47b6fffdd51cf0a17, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 596752079159594168, guid: 70881f7f2de7aaa47b6fffdd51cf0a17,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 230767547694448850}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70881f7f2de7aaa47b6fffdd51cf0a17, type: 3}
 --- !u!4 &535944612248113323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 617549907966898628, guid: 70881f7f2de7aaa47b6fffdd51cf0a17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1144464711973364079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &552221250583064023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 596752079159594168, guid: 70881f7f2de7aaa47b6fffdd51cf0a17,
     type: 3}
   m_PrefabInstance: {fileID: 1144464711973364079}
   m_PrefabAsset: {fileID: 0}

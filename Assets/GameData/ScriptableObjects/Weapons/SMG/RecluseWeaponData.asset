@@ -21,4 +21,6 @@ MonoBehaviour:
   zoom: 13
   roundsPerMinute: 900
   magSize: 36
-  recoilDirection: 5
+  recoilDirection: 4
+  bulletTrail: {fileID: 6755395616839128448, guid: b5ddf22cf369f674f90f86d41840c58a,
+    type: 3}

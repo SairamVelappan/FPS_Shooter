@@ -11,6 +11,8 @@ namespace FPS.Weapons
         [Tooltip("Used to hold the weapons data")]
         [SerializeField]private WeaponData _weaponData;  // refernece to the weapon data
 
+        [SerializeField]private Transform _muzzleTransform;
+
         private int _currentAmmoCount; // current ammo present in the mag
         private bool _isReloading; // bool to check if we are reloading or not
         private float _timeBetweenEachShot; // a temp var to store time 
@@ -63,12 +65,20 @@ namespace FPS.Weapons
             if(CanShoot())
             {
                 Debug.Log("Actual entery");
+                TrailRenderer trail = Instantiate(_weaponData.bulletTrail,_muzzleTransform.position,Quaternion.identity);
+
                 if(Physics.Raycast(_cameraTransform.position,transform.forward,out RaycastHit hitInfo,_weaponData.range))
                 {
                     Debug.Log(hitInfo.transform.name + " Is hit");
+                    StartCoroutine(SpawnTrail(trail,hitInfo.point));
+                }
+                else
+                {
+                    StartCoroutine(SpawnTrail(trail,transform.forward * _weaponData.range));
                 }
 
                 WeaponRecoil.initializeRecoil(_weaponData.recoilDirection);
+
                 _currentAmmoCount--;
                 _timeBetweenEachShot = 0;
             }
@@ -96,6 +106,22 @@ namespace FPS.Weapons
             _currentAmmoCount = _weaponData.magSize;
             _isReloading = false;
             Debug.Log("reloaded");
+        }
+
+        IEnumerator SpawnTrail(TrailRenderer trail,Vector3 endPos)
+        {
+            float time = 0;
+            Vector3 startPos= trail.transform.position;
+
+            while(time < 1)
+            {
+                trail.transform.position = Vector3.Lerp(startPos,endPos,time);
+                time += Time.deltaTime / trail.time;
+
+                yield return null;
+            }
+
+            Destroy(trail.gameObject,trail.time);
         }
 
         #endregion

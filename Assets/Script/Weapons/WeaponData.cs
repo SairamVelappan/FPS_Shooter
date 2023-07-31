@@ -22,6 +22,9 @@ namespace FPS.Weapons
 
        public float recoilDirection;
 
+
+       public TrailRenderer bulletTrail;
+
     
     }
 }
