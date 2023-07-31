@@ -14,17 +14,17 @@ namespace FPS
       
         public override void HandleIdleState()
         {
-           float magnitude = controller.inputManager.playerControl.Movement.WASD.ReadValue<Vector2>().magnitude;
+           float magnitude = controller.inputManager.playerInput.Movement.WASD.ReadValue<Vector2>().magnitude;
            if(magnitude > 0)
                 controller.SwitchStates(new WalkingState(controller));
         }
         public override void HandleMovementState()
         {
-            playerAction = controller.inputManager.playerControl.Movement.WASD.ReadValue<Vector2>();
+            playerAction = controller.inputManager.playerInput.Movement.WASD.ReadValue<Vector2>();
 
             move = controller.gameObject.transform.right * playerAction.x + controller.gameObject.transform.transform.forward * playerAction.y;
 
-            move *= controller.inputManager.playerControl.Movement.Run.ReadValue<float>() == 0 ? controller.characterStats.speed : controller.characterStats.runSpeed;
+            move *= controller.inputManager.playerInput.Movement.Run.ReadValue<float>() == 0 ? controller.characterStats.speed : controller.characterStats.runSpeed;
             controller.rb.velocity = new Vector3(move.x, controller.rb.velocity.y, move.z);
 
             if(playerAction.magnitude == 0)

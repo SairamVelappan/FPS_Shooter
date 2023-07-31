@@ -6,17 +6,18 @@ namespace FPS
 {
     public class InputManagerPlayerAction : MonoBehaviour
     {
-        public PlayerControlles playerControl;
+        public PlayerInput playerInput;
 
-        private void Awake() => playerControl = new PlayerControlles();
+        private void Awake() => playerInput = new PlayerInput();
 
         private void OnEnable() 
         {
-            playerControl.Enable();    
+            playerInput.Enable();    
         }
         
-        private void OnDisable() {
-            playerControl.Disable();
+        private void OnDisable() 
+        {
+            playerInput.Disable();
         }
             
         

@@ -14,7 +14,7 @@ namespace FPS
 
         private void Start() {
             rb = GetComponent<Rigidbody>();
-            inputManager.playerControl.Movement.Jump.performed += ctx => Jump();
+            inputManager.playerInput.Movement.Jump.performed += ctx => Jump();
 
             
             // if(controller.inputManager.playerControl.Movement.Jump.WasPressedThisFrame())

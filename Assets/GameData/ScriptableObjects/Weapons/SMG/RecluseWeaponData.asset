@@ -21,4 +21,4 @@ MonoBehaviour:
   zoom: 13
   roundsPerMinute: 900
   magSize: 36
-  recoilDirection: 4
+  recoilDirection: 5
