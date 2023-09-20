@@ -10,6 +10,8 @@ namespace FPS.SO
         public float jumpForce = 5f;
         public float speed;
         public float runSpeed;
-        public bool isGrounded;
+        public bool readyToJump;
+
+        public LayerMask groundLayer;
     }
 }

@@ -15,4 +15,7 @@ MonoBehaviour:
   jumpForce: 5
   speed: 10
   runSpeed: 15
-  isGrounded: 0
+  readyToJump: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
