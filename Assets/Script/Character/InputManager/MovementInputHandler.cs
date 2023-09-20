@@ -16,7 +16,9 @@ namespace FPS
         {
            float magnitude = controller.inputManager.playerInput.Movement.WASD.ReadValue<Vector2>().magnitude;
            if(magnitude > 0)
+           {
                 controller.SwitchStates(new WalkingState(controller));
+           }
         }
         public override void HandleMovementState()
         {
@@ -28,7 +30,9 @@ namespace FPS
             controller.rb.velocity = new Vector3(move.x, controller.rb.velocity.y, move.z);
 
             if(playerAction.magnitude == 0)
+            {
                 controller.SwitchStates(new IdleStates(controller));
+            }
         }
 
         public override void HandleJumpState() => controller.characterJump.Jump();

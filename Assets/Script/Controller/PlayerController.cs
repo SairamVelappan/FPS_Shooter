@@ -2,6 +2,7 @@ using UnityEngine;
 using FPS.Player.State;
 using FPS.Character.Jump;
 using FPS.SO;
+using System.Collections;
 
 namespace FPS.Controller
 {
@@ -34,10 +35,22 @@ namespace FPS.Controller
         }
 
         private void Update(){
-            GroundCheck();
+            // GroundCheck();
+            Debug.Log(characterStats.readyToJump);
+            if(GroundCheck())        
+                characterStats.readyToJump = true; 
+              
+
         }
         private void FixedUpdate() => currentState?.UpdateState();
-        private void OnJump() => SwitchStates(jumpstate);
+        private void OnJump()
+        {
+            if(characterStats.readyToJump)
+            {
+                SwitchStates(jumpstate);
+                StartCoroutine(WaitForReadyToJump());
+            }
+        } 
 
         public void SwitchStates(CharacterStates nextState)
         {
@@ -48,7 +61,19 @@ namespace FPS.Controller
 
         public bool GroundCheck() 
         {
-            return Physics.Raycast(transform.GetChild(0).position, Vector3.down, 2 * 0.5f + 0.2f);
+            return Physics.Raycast(transform.GetChild(0).position, Vector3.down, 2 * 0.5f + 0.01f, characterStats.groundLayer);
+        }
+
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.GetChild(0).position, Vector3.down * (2 * 0.5f + 0.01f));     
+        }
+
+        IEnumerator WaitForReadyToJump()
+        {     
+            yield return new WaitForSeconds(0.05f);
+            characterStats.readyToJump = false;
         }
     }
 }
