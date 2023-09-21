@@ -37,7 +37,7 @@ namespace FPS
 
             xRot -= mouseY;
             xRot = Mathf.Clamp(xRot, -90f, 90f);
-
+            
             transform.localRotation = Quaternion.Euler(xRot + _recoilDirection.x, _recoilDirection.y, _recoilDirection.z);
             body.Rotate(Vector3.up * mouseX);
         }
