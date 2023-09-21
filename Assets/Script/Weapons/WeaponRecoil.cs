@@ -27,10 +27,10 @@ namespace FPS.Weapons
             CameraLook.getRecoilDirection.Invoke(_currentRotation);
         }
 
-        void Recoil(float recoilDirection)
+        void Recoil(float recoilValue)
         {
-            _targetRotation += new Vector3(-recoilDirection,
-                UnityEngine.Random.Range(-recoilDirection / 2, recoilDirection / 2),
+            _targetRotation += new Vector3(-recoilValue,
+                UnityEngine.Random.Range(-recoilValue / 2, recoilValue / 2),
                 0);
         }
 

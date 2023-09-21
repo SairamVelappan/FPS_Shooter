@@ -77,7 +77,7 @@ namespace FPS.Weapons
                     StartCoroutine(SpawnTrail(trail,transform.forward * _weaponData.range));
                 }
 
-                WeaponRecoil.initializeRecoil(_weaponData.recoilDirection);
+                WeaponRecoil.initializeRecoil(_weaponData.recoilValue);
 
                 _currentAmmoCount--;
                 _timeBetweenEachShot = 0;

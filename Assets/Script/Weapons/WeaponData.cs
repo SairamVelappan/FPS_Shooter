@@ -20,7 +20,7 @@ namespace FPS.Weapons
        public float roundsPerMinute;
        public int magSize;
 
-       public float recoilDirection;
+       public float recoilValue;
 
 
        public TrailRenderer bulletTrail;
