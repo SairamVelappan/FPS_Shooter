@@ -24,7 +24,7 @@ namespace FPS.Character.Jump
             {
                 await Task.Yield();
 
-                if(controller.inputManager.playerControl.Movement.Jump.WasPressedThisFrame())
+                if(controller.inputManager.playerInput.Movement.Jump.WasPressedThisFrame())
                 {
                     Debug.Log("Class Jumped");
                     // Jump();
